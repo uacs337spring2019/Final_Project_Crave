@@ -36,7 +36,7 @@ app.get('/', function (req, res) { //Start of the server
     
     res.header("Access-Control-Allow-Origin", "*");
 
-    let mode = req.query.mode;   //mode of request 
+    let mode = "all";   //req.query.mode;   //mode of request 
 
     if (mode == "all"){
     let RavesArray = [];  //Array containing all the Raves
