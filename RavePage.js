@@ -84,7 +84,7 @@
 
         if(radio[0].checked) { //If the location button is checked 
 
-            let url = "http://localhost:3000?mode=location&name=" + state;
+            let url = "http://u-crave-raves.herokuapp.com?mode=location&name=" + state;
             fetch(url) //Start fetching description for description mode 
             .then(checkStatus)
             .then(function (responseText) {
@@ -126,7 +126,7 @@
             }
         if(radio[1].checked) {
 
-            let url = "http://localhost:3000?mode=rave&name=" + state;
+            let url = "http://u-crave-raves.herokuapp.com?mode=rave&name=" + state;
             fetch(url) //Start fetching for searching by name 
             .then(checkStatus)
             .then(function (responseText) {
@@ -171,7 +171,7 @@
 * Function
 */
    function Fetch() { //Fetch all of the raves in the database 
-    let url = "http://localhost:3000?mode=all&name=empty";
+    let url = "http://u-crave-raves.herokuapp.com?mode=all&name=empty";
     fetch(url) //Start fetching 
     .then(checkStatus)
     .then(function (responseText) {
@@ -213,7 +213,7 @@
     window.scrollTo({ top: 400, behavior: 'smooth' });
     let folder = this.id;
     console.log(this.id); 
-    let url = "http://localhost:3000?mode=single&name=" + folder;
+    let url = "http://u-crave-raves.herokuapp.com?mode=single&name=" + folder;
     fetch(url) //Fetch information for clicked on rave 
     .then(checkStatus)
     .then(function (responseText) {
