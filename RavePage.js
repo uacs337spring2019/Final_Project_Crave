@@ -67,7 +67,7 @@
 
         if(radio[0].checked) {
 
-            let url = "http://u-crave-raves.herokuapp.com?mode=location&name=" + state;
+            let url = "http://u-crave-raves.herokuapp.com/?mode=location&name=" + state;
             fetch(url) //Start fetching description for description mode 
             .then(checkStatus)
             .then(function (responseText) {
@@ -109,7 +109,7 @@
             }
         if(radio[1].checked) {
 
-            let url = "http://u-crave-raves.herokuapp.com?mode=rave&name=" + state;
+            let url = "http://u-crave-raves.herokuapp.com/?mode=rave&name=" + state;
             fetch(url) //Start fetching description for description mode 
             .then(checkStatus)
             .then(function (responseText) {
@@ -152,7 +152,7 @@
 
    function Fetch() {
     //let url = "http://u-crave-raves.herokuapp.com?mode=all"; 
-    let url = "http://u-crave-raves.herokuapp.com?mode=all&name=empty";
+    let url = "http://u-crave-raves.herokuapp.com/?mode=all&name=empty";
     fetch(url) //Start fetching description for description mode 
     .then(checkStatus)
     .then(function (responseText) {
@@ -190,7 +190,7 @@
    function Click(){
     window.scrollTo({ top: 400, behavior: 'smooth' });
     let folder = this.id;
-    let url = "http://u-crave-raves.herokuapp.com?mode=single&name=" + folder;
+    let url = "http://u-crave-raves.herokuapp.com/?mode=single&name=" + folder;
     fetch(url) //Start fetching description for description mode 
     .then(checkStatus)
     .then(function (responseText) {
