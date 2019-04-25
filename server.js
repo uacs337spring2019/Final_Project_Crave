@@ -16,7 +16,7 @@ let RavesList = {}; //List containing all the books
 //let http = require('http'); 
 //let server = http.Server(app); 
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static('/public'));
 
 function readFile(fileName) { //Read from text file function 
 	let file = 0;
