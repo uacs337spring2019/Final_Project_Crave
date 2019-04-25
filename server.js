@@ -153,4 +153,4 @@ app.get('/', function (req, res) { //Start of the server
     });
 
 
-app.listen(3000); //Specify the port number 
+app.listen(process.env.PORT); //Specify the port number 
