@@ -2,7 +2,7 @@
   "name": "crave",
   "version": "1.0.0",
   "description": "Final ",
-  "main": "RavePage_service.js",
+  "main": "server.js",
   "dependencies": {
     "client-sessions": "^0.8.0",
     "cookie-parser": "^1.4.4",
