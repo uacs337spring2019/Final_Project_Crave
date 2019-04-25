@@ -31,6 +31,8 @@ function readFile(fileName) { //Read from text file function
 console.log("opened"); 
 app.get('/', function (req, res) { //Start of the server 
     console.log("Service Connected"); 
+     
+     console.log("YOOOO"); 
     
     res.header("Access-Control-Allow-Origin", "*");
 
