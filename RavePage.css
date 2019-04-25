@@ -1,4 +1,13 @@
-body{
+/*
+    CSC 337 Final Project 
+    Name: Crave
+    Authors: Yasser Alsaif and Matthew Heger
+    Descripton: The page will display all upcoming raves and you can search for upcoming raves by location or name.  
+*/
+
+
+body{ /* properties for entire body of page*/ 
+    font-family: "Comic Sans MS", cursive, sans-serif; 
     text-align: center;
     margin: 0px; 
     background-image: url("crowd.gif"); 
@@ -6,37 +15,39 @@ body{
     background-size: cover;
 }
 
-.TextName {
-    /*
-    to make the name bold
-*/
-    font-weight: bold;
+#Peace { /* word colors in desc.*/ 
+    color: blue; 
 }
 
-#banner {
+#Love {
+    color: red; 
+}
+#Unity {
+    color: orange; 
+}
+
+#banner { /* properties for top banner*/ 
     position: relative;  
     background-image: url("RainbowBanner.jpg"); 
     background-repeat: no-repeat; 
     background-size: cover;
-    text-align: bottom; 
-    justify-content: bottom; 
     height: 200px; 
     margin: 0px; 
     padding: 0px; 
 }
-#header {
+#header { /* properties for the header text*/ 
     display: inline-block; 
     color: white; 
-    font-size: 150pt;
+    font-size: 125pt;
     padding-top: 0px;
     margin: auto;
 }
 
-#wrappercontent {
+#wrappercontent { /* div to center content */ 
     justify-content: center; 
 }
 
-#content { 
+#content {  /* Properties for main page content */ 
     background-color: white; 
     margin: 30px; 
     display: inline-block; 
@@ -45,87 +56,39 @@ body{
     justify-content: center; 
 }
 
-#about {
+#about { /* description text*/ 
+    font-family: "Comic Sans MS", cursive, sans-serif; 
     display: inline-block; 
     font-size: 20pt; 
-    text-align: left; 
+    text-align: center; 
+    padding: 50px; 
     width: 80%; 
 }
 
-#searchbar {
+#searchbar { /* Search Bar Properties */ 
     display: inline-block; 
     font-size: 20pt;
     width: 80%; 
-    border: 2px solid black ;
+   /* border: black solid 5px; 
+    border-radius: 50px; */
 }
 
 #search {
-    color: white; 
-    background-color: black; 
-    border: 2px solid black ;
-    border-radius: 2px;
+    font-family: "Comic Sans MS", cursive, sans-serif; 
+    background-color: lightgray; 
+    border: 2px solid white;
+    border-radius: 40px;
     width: 100px; 
+    height: 55px; 
+    font-size: 20px; 
+}
+
+#searchinput {
+    font-family: "Comic Sans MS", cursive, sans-serif; 
     height: 50px; 
+    width: 300px; 
+    font-size: 20px; 
 }
-
-/*
-#description {
-    margin: 20px; 
-}
-
-#descriptionleg {
-    font-size: 25pt; 
-    text-align: left; 
-}*/
-
-#chatbox{
-    /*
-    creating the main box properties
-*/
-    background-color: gray; 
-    border: 2px solid;
-    border-radius: 20px;
-    width: 20%;
-    height: 30%;
-    justify-content: center;
-    padding: 2px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    display: block;
-    margin:auto;
-}
-/*
-    the send box properties
-*/
-#sendbox{
-    position: absolute;
-    bottom: 5px;
-    border: 1px;
-    border-radius: 20px;
-    width: 100%;
-    text-align: center;
-    background-color: #ccc;
-    height: 20%;
-}
-/*
-    text box properties
-*/
-#texts{
-    border: 1px solid;
-    padding:5px;
-    height: 60%;
-    overflow: auto;
-}
-/*
-    for the message after sending was successful
-*/
-#mess{
-    text-align: center;
-    padding: 0; 
-    margin: 0; 
-}
-
 .mainimage {
     display: block;
     margin-left: auto;
@@ -136,7 +99,7 @@ body{
     height: 200px; 
 }
 
-#ravebox { 
+#ravebox {  /* Properties for each featured rave on front page */ 
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -157,21 +120,22 @@ body{
 }
 
 .name {
-    font-family: Arial, Helvetica, sans-serif; 
+    font-family: "Comic Sans MS", cursive, sans-serif; 
     padding-bottom: 10px; 
     font-size: 15pt; 
 }
-
-#coverimage { 
+ 
+#coverimage { /* Images on main page */ 
     width: 450px; 
     height: 375px; 
     border: white solid 5px; 
     border-radius: 50px; 
 }
 
-#lineupimage { 
+#lineupimage {  /*Properties for image on single div  */ 
     width: 700px; 
     height: 1000px; 
+    padding: 50px; 
 }
 #info { 
     display: flex; 
@@ -184,7 +148,7 @@ body{
     text-align: left; 
 }
 
-#description {
+#description { 
     padding-top: 90px; 
     justify-content: left; 
 }

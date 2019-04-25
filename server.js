@@ -1,3 +1,8 @@
+/*CSC 337 Final Project 
+Name: Crave
+Authors: Yasser Alsaif and Matthew Heger
+Descripton: The page will display all upcoming raves and you can search for upcoming raves by location or name.  */
+
 
 "use strict";   
 const express = require("express");
@@ -13,7 +18,7 @@ let RavesList = {}; //List containing all the books
 
 app.use(express.static('public'));
 
-function readFile(fileName) { 
+function readFile(fileName) { //Read from text file function 
 	let file = 0;
 	try {  
 	    file = fs.readFileSync(fileName, 'utf8');
@@ -24,8 +29,9 @@ function readFile(fileName) {
 	return file;
 }
 console.log("opened"); 
-app.get('/', function (req, res) {
+app.get('/', function (req, res) { //Start of the server 
     console.log("Service Connected"); 
+    
     res.header("Access-Control-Allow-Origin", "*");
 
     let mode = req.query.mode;   //mode of request 
@@ -92,14 +98,14 @@ app.get('/', function (req, res) {
     res.send(JSON.stringify(raveinfo));
     }
 
-    if (mode == "location") {
+    if (mode == "location") { //When searching for a rave by location 
     let state = req.query.name; 
     let statename = ""; 
     let matches = []; 
 
-    let words = state.split("_");
+    let words = state.split("_"); //Split the name of folder on underscore 
     for (let m = 0; m < words.length; m++){
-    if (m == words.length - 1) {
+    if (m == words.length - 1) { //if it is last word don't add extra space at end 
         statename = statename + words[m]; 
     }
     else {
@@ -108,16 +114,16 @@ app.get('/', function (req, res) {
     }
     console.log(statename); 
 
-    for(let i = 0; i < RavesList["Raves"].length; i++) {
+    for(let i = 0; i < RavesList["Raves"].length; i++) { //loop through all raves 
        if (RavesList["Raves"][i].location.includes(statename)) {
-            matches.push(RavesList["Raves"][i]); 
+            matches.push(RavesList["Raves"][i]);  //add raves that match statename to array
        }
     }
 
-    res.send(JSON.stringify(matches)); 
+    res.send(JSON.stringify(matches)); //send response 
     }
 
-    if (mode == "rave") {
+    if (mode == "rave") { //when searching by rave 
         console.log("inside"); 
     let state = req.query.name; 
     let statename = ""; 
@@ -139,7 +145,7 @@ app.get('/', function (req, res) {
             matches.push(RavesList["Raves"][i]); 
        }
     }
-    res.send(JSON.stringify(matches)); 
+    res.send(JSON.stringify(matches)); //send rave name matches 
     }
 
 
@@ -147,4 +153,4 @@ app.get('/', function (req, res) {
     });
 
 
-app.listen(process.env.PORT); //Specify the port number 
+app.listen(3000); //Specify the port number 
