@@ -1,7 +1,7 @@
 {
-  "name": "creave",
+  "name": "crave",
   "version": "1.0.0",
-  "description": "raves",
+  "description": "Final ",
   "main": "server.js",
   "dependencies": {
     "client-sessions": "^0.8.0",
@@ -12,16 +12,17 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "\"echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/uacs337spring2019/Final_Project_Crave.git"
   },
   "keywords": [
-    "Matt"
+    "Final",
+    "Project"
   ],
-  "author": "Matt and Yasser",
+  "author": "Matthew and Yaser",
   "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/uacs337spring2019/Final_Project_Crave/issues"
