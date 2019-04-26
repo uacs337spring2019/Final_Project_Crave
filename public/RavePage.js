@@ -126,7 +126,7 @@
             }
         if(radio[1].checked) {
 
-            let url = "http://u-crave-raves.herokuapp.com?mode=rave&name=" + state;
+            let url = "https://u-crave-raves.herokuapp.com?mode=rave&name=" + state;
             fetch(url) //Start fetching for searching by name 
             .then(checkStatus)
             .then(function (responseText) {
