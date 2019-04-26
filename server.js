@@ -10,7 +10,7 @@ const app = express();
 var mysql = require('mysql');
 let fs = require('fs');
 let Response = "";
-let files = fs.readdirSync(__dirname + '/Raves'); 
+let files = fs.readdirSync('public/Raves'); 
 let RavesList = {}; //List containing all the books
 
 //let http = require('http'); 
