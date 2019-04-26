@@ -89,7 +89,7 @@ app.get('/', function (req, res) { //Start of the server
     }
     }
    
-    let fileName = folder + "/date.txt";
+    let fileName = "public/Rave/" + folder + "/date.txt";
     console.log(fileName); 
     let EntireFile = readFile(fileName); 
     let lines = EntireFile.split("\n");  
