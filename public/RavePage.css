@@ -28,7 +28,7 @@ body{ /* properties for entire body of page*/
 
 #banner { /* properties for top banner*/ 
     position: relative;  
-    background-image: url("RainbowBanner.jpg"); 
+    background-image: url("Rainbowbanner.jpg"); 
     background-repeat: no-repeat; 
     background-size: cover;
     height: 200px; 
