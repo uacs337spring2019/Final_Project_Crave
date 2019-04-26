@@ -88,12 +88,13 @@ app.get('/', function (req, res) { //Start of the server
         name = name + words[m] + " "; 
     }
     }
-
+   
     let fileName = "public/Raves/" + folder + "/date.txt";
-
+    console.log(fileName); 
     let EntireFile = readFile(fileName); 
     let lines = EntireFile.split("\n");  
     let raveinfo = {}; 
+	    console.log(lines); 
     raveinfo["name"] = name;  //add json title 
     raveinfo["date"] = lines[0]; //add date to json 
     raveinfo["location"] = lines[1]; //add location to json
