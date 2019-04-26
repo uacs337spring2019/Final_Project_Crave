@@ -35,7 +35,7 @@ app.get('/', function (req, res) { //Start of the server
      console.log("YOOOO"); 
     
     res.header("Access-Control-Allow-Origin", "*");
-
+    mode = req.query.mode; 
     if (mode == "all"){
     let RavesArray = [];  //Array containing all the Raves
     let words;  
