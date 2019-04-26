@@ -171,7 +171,7 @@
 * Function
 */
    function Fetch() { //Fetch all of the raves in the database 
-    let url = "https://u-crave-raves.herokuapp.com?mode=all&name=empty";
+    let url = "http://u-crave-raves.herokuapp.com?mode=all&name=empty";
     fetch(url) //Start fetching 
     .then(checkStatus)
     .then(function (responseText) {
