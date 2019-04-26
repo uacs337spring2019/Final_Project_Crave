@@ -55,7 +55,7 @@ app.get('/', function (req, res) { //Start of the server
         }
         }
         
-        let fileName = "Raves/" + files[j] + "/date.txt";
+        let fileName = "public/Raves/" + files[j] + "/date.txt";
         let EntireFile = readFile(fileName); 
 
         let lines = EntireFile.split("\n");  
@@ -89,7 +89,7 @@ app.get('/', function (req, res) { //Start of the server
     }
     }
 
-    let fileName = "Raves/" + folder + "/date.txt";
+    let fileName = "public/Raves/" + folder + "/date.txt";
 
     let EntireFile = readFile(fileName); 
     let lines = EntireFile.split("\n");  
